@@ -1,0 +1,41 @@
+<section class="section page-hero">
+  <div class="container">
+    <span class="eyebrow">Gallery</span>
+    <h1>Selected projects.</h1>
+    <p class="page-hero__lead">A look at recently completed homes, furniture, and renovations.</p>
+  </div>
+</section>
+
+<section class="section gallery">
+  <div class="container">
+    <div class="gallery__filters">
+      <button
+        type="button"
+        *ngFor="let category of categories"
+        class="filter-chip"
+        [class.filter-chip--active]="activeCategory() === category"
+        (click)="setCategory(category)"
+      >
+        {{ category }}
+      </button>
+    </div>
+
+    <div class="gallery__grid">
+      <figure class="gallery__item" *ngFor="let project of filteredProjects">
+        <div class="gallery__thumb"></div>
+        <figcaption>
+          <span class="gallery__title">{{ project.title }}</span>
+          <span class="gallery__category">{{ project.category }}</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container text-center">
+    <h2>Like what you see?</h2>
+    <p>Let's talk about how we can bring the same care to your space.</p>
+    <a routerLink="/contact" class="btn btn--accent">Start a project</a>
+  </div>
+</section>

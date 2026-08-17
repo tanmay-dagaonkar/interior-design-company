@@ -1,0 +1,53 @@
+.page-hero {
+  padding-top: var(--space-6);
+  background: linear-gradient(180deg, #f2e9dd 0%, var(--color-bg) 100%);
+}
+
+.page-hero__lead {
+  max-width: 56ch;
+  font-size: 1.05rem;
+}
+
+.story__inner {
+  display: grid;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+@media (min-width: 720px) {
+  .story__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.story__image {
+  aspect-ratio: 4 / 3;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #e4dace, #cbb99a);
+}
+
+.values__grid {
+  margin-top: var(--space-4);
+}
+
+.value-card {
+  padding: var(--space-4);
+  border-top: 2px solid var(--color-accent);
+}
+
+.cta-band {
+  padding: var(--space-6) 0;
+  background: var(--color-text);
+  color: var(--color-bg);
+
+  h2 {
+    color: var(--color-bg);
+  }
+
+  p {
+    color: rgba(250, 246, 241, 0.7);
+    max-width: 46ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

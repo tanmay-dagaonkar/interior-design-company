@@ -1,0 +1,25 @@
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a routerLink="/" class="navbar__brand" (click)="closeMenu()">Karigrah</a>
+
+    <nav class="navbar__links" [class.navbar__links--open]="menuOpen()">
+      <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a>
+      <a routerLink="/about" routerLinkActive="is-active" (click)="closeMenu()">About</a>
+      <a routerLink="/services" routerLinkActive="is-active" (click)="closeMenu()">Services</a>
+      <a routerLink="/gallery" routerLinkActive="is-active" (click)="closeMenu()">Gallery</a>
+      <a routerLink="/contact" routerLinkActive="is-active" class="btn navbar__cta" (click)="closeMenu()">Contact</a>
+    </nav>
+
+    <button
+      type="button"
+      class="navbar__toggle"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen()"
+      aria-label="Toggle navigation menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>

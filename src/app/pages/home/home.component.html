@@ -1,0 +1,92 @@
+<section class="hero">
+  <div class="container hero__inner">
+    <span class="eyebrow">Interior Design Studio</span>
+    <h1>Spaces shaped by craft,<br />built to be lived in.</h1>
+    <p class="hero__lead">
+      Karigrah is a boutique interior design studio designing homes and spaces that honour
+      material, light, and the people who live within them.
+    </p>
+    <div class="hero__actions">
+      <a routerLink="/contact" class="btn btn--accent">Start a project</a>
+      <a routerLink="/gallery" class="btn">View our work</a>
+    </div>
+  </div>
+</section>
+
+<section class="section intro">
+  <div class="container intro__inner">
+    <div>
+      <span class="eyebrow">Our Philosophy</span>
+      <h2>Design that respects craftsmanship.</h2>
+    </div>
+    <p>
+      The word "Karigrah" draws from "kaarigar" — the artisan. Every project we take on is
+      built around that idea: thoughtful design paired with honest, skilled craft. We work
+      closely with local makers, sourcing materials responsibly, to create interiors that
+      feel personal rather than trend-driven.
+    </p>
+  </div>
+</section>
+
+<section class="section section--muted services-preview">
+  <div class="container">
+    <div class="text-center services-preview__heading">
+      <span class="eyebrow">What We Do</span>
+      <h2>Services</h2>
+    </div>
+
+    <div class="grid grid--3">
+      <article class="service-card" *ngFor="let service of servicePreviews">
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+      </article>
+    </div>
+
+    <div class="text-center services-preview__cta">
+      <a routerLink="/services" class="btn">Explore all services</a>
+    </div>
+  </div>
+</section>
+
+<section class="section gallery-teaser">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">Selected Work</span>
+      <h2>A glimpse into our projects</h2>
+    </div>
+
+    <div class="gallery-teaser__grid">
+      <div class="gallery-teaser__item" *ngFor="let i of [1, 2, 3, 4, 5, 6]">
+        <span>Project {{ i }}</span>
+      </div>
+    </div>
+
+    <div class="text-center services-preview__cta">
+      <a routerLink="/gallery" class="btn btn--accent">See full gallery</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--muted testimonials">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">Kind Words</span>
+      <h2>From our clients</h2>
+    </div>
+
+    <div class="grid grid--2 testimonials__grid">
+      <blockquote class="testimonial" *ngFor="let t of testimonials">
+        <p>&ldquo;{{ t.quote }}&rdquo;</p>
+        <cite>{{ t.author }}</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container text-center">
+    <h2>Let's design your next space.</h2>
+    <p>Tell us about your project and we'll get back to you within two working days.</p>
+    <a routerLink="/contact" class="btn btn--accent">Get in touch</a>
+  </div>
+</section>

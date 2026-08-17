@@ -1,0 +1,55 @@
+<section class="section page-hero">
+  <div class="container">
+    <span class="eyebrow">About Karigrah</span>
+    <h1>Design rooted in craftsmanship.</h1>
+    <p class="page-hero__lead">
+      Karigrah began with a simple belief: a home should be made, not just decorated.
+      We're a small studio of designers and makers working across residential and
+      hospitality interiors.
+    </p>
+  </div>
+</section>
+
+<section class="section section--muted story">
+  <div class="container story__inner">
+    <div class="story__image" aria-hidden="true"></div>
+    <div class="story__content">
+      <span class="eyebrow">Our Story</span>
+      <h2>From a small workshop to full-scale interiors.</h2>
+      <p>
+        Karigrah started as a furniture workshop, working with a handful of skilled
+        artisans on custom pieces. Clients kept asking for more — for the whole room,
+        then the whole home — and the studio grew from there.
+      </p>
+      <p>
+        Today we design and execute complete interiors, but the workshop mindset never
+        left. Every project still starts with a question: what can be made well, by hand,
+        for this specific space?
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section values">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">What We Believe</span>
+      <h2>Our values</h2>
+    </div>
+
+    <div class="grid grid--3 values__grid">
+      <article class="value-card" *ngFor="let value of values">
+        <h3>{{ value.title }}</h3>
+        <p>{{ value.description }}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container text-center">
+    <h2>Curious how we work?</h2>
+    <p>Reach out and let's talk about your space, your timeline, and your budget.</p>
+    <a routerLink="/contact" class="btn btn--accent">Get in touch</a>
+  </div>
+</section>

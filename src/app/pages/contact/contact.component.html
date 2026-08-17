@@ -1,0 +1,73 @@
+<section class="section page-hero">
+  <div class="container">
+    <span class="eyebrow">Contact</span>
+    <h1>Let's start the conversation.</h1>
+    <p class="page-hero__lead">
+      Tell us a little about your space and what you're hoping to create. We reply to
+      every enquiry within two working days.
+    </p>
+  </div>
+</section>
+
+<section class="section contact">
+  <div class="container contact__inner">
+    <div class="contact__details">
+      <h3>Studio</h3>
+      <p>hello&#64;karigrah.com</p>
+      <p>+91 00000 00000</p>
+      <p>Mumbai, India</p>
+
+      <h3>Follow</h3>
+      <p>
+        <a href="https://www.instagram.com/karigrah" target="_blank" rel="noopener">Instagram</a>
+      </p>
+    </div>
+
+    <form class="contact__form" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" type="text" formControlName="name" />
+        <span class="field__error" *ngIf="form.get('name')?.touched && form.get('name')?.invalid">
+          Please enter your name.
+        </span>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email" />
+        <span class="field__error" *ngIf="form.get('email')?.touched && form.get('email')?.invalid">
+          Please enter a valid email.
+        </span>
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone (optional)</label>
+        <input id="phone" type="tel" formControlName="phone" />
+      </div>
+
+      <div class="field">
+        <label for="projectType">Project type</label>
+        <select id="projectType" formControlName="projectType">
+          <option>Residential Interiors</option>
+          <option>Bespoke Furniture</option>
+          <option>Renovation & Turnkey</option>
+          <option>Design Consultation</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="message">Tell us about your project</label>
+        <textarea id="message" rows="5" formControlName="message"></textarea>
+        <span class="field__error" *ngIf="form.get('message')?.touched && form.get('message')?.invalid">
+          Please share a few details about your project.
+        </span>
+      </div>
+
+      <button type="submit" class="btn btn--accent">Send enquiry</button>
+
+      <p class="contact__success" *ngIf="submitted()">
+        Thanks — we've received your message and will be in touch soon.
+      </p>
+    </form>
+  </div>
+</section>

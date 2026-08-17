@@ -1,0 +1,117 @@
+.hero {
+  padding: var(--space-6) 0 var(--space-5);
+  background: linear-gradient(180deg, #f2e9dd 0%, var(--color-bg) 100%);
+}
+
+.hero__inner {
+  max-width: 760px;
+}
+
+.hero__lead {
+  font-size: 1.1rem;
+  max-width: 52ch;
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.intro__inner {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (min-width: 720px) {
+  .intro__inner {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.services-preview__heading,
+.services-preview__cta {
+  margin-bottom: var(--space-4);
+}
+
+.services-preview__cta {
+  margin-top: var(--space-4);
+  margin-bottom: 0;
+}
+
+.service-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+  padding: var(--space-4);
+}
+
+.gallery-teaser__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 720px) {
+  .gallery-teaser__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gallery-teaser__item {
+  aspect-ratio: 4 / 5;
+  background: linear-gradient(135deg, #e4dace, #cbb99a);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(43, 38, 34, 0.55);
+  font-family: var(--font-heading);
+  letter-spacing: 0.04em;
+}
+
+.testimonials__grid {
+  margin-top: var(--space-4);
+}
+
+.testimonial {
+  margin: 0;
+  padding: var(--space-4);
+  background: var(--color-bg);
+  border-left: 3px solid var(--color-accent);
+
+  p {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--color-text);
+  }
+
+  cite {
+    display: block;
+    margin-top: var(--space-2);
+    font-style: normal;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+}
+
+.cta-band {
+  padding: var(--space-6) 0;
+  background: var(--color-text);
+  color: var(--color-bg);
+
+  h2 {
+    color: var(--color-bg);
+  }
+
+  p {
+    color: rgba(250, 246, 241, 0.7);
+    max-width: 46ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
