@@ -14,19 +14,20 @@ interface Project {
   styleUrl: './gallery.component.scss'
 })
 export class GalleryComponent {
-  categories = ['All', 'Residential', 'Furniture', 'Renovation'];
+  categories = ['All', 'Residential', 'Office', 'Kitchen', 'Home Bar', 'Renovation'];
   activeCategory = signal('All');
 
+  // Placeholder entries — swap in real project photos and names once available.
   projects: Project[] = [
-    { title: 'Bandra Apartment', category: 'Residential' },
-    { title: 'Teak Dining Set', category: 'Furniture' },
-    { title: 'Indiranagar Bungalow', category: 'Renovation' },
-    { title: 'Whitefield Villa', category: 'Residential' },
-    { title: 'Walnut Console', category: 'Furniture' },
-    { title: 'Koregaon Park Loft', category: 'Residential' },
-    { title: 'Heritage Home Restoration', category: 'Renovation' },
-    { title: 'Cane Lounge Chair', category: 'Furniture' },
-    { title: 'Juhu Penthouse', category: 'Residential' }
+    { title: 'Residential Project', category: 'Residential' },
+    { title: 'Office Fit-Out', category: 'Office' },
+    { title: 'Modular Kitchen', category: 'Kitchen' },
+    { title: 'Home Bar', category: 'Home Bar' },
+    { title: 'Full Home Renovation', category: 'Renovation' },
+    { title: 'Residential Project', category: 'Residential' },
+    { title: 'Office Interior', category: 'Office' },
+    { title: 'Smart Kitchen', category: 'Kitchen' },
+    { title: 'Residential Project', category: 'Residential' }
   ];
 
   get filteredProjects(): Project[] {

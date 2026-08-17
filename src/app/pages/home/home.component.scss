@@ -1,15 +1,27 @@
 .hero {
   padding: var(--space-6) 0 var(--space-5);
-  background: linear-gradient(180deg, #f2e9dd 0%, var(--color-bg) 100%);
+  background: linear-gradient(180deg, var(--color-dark) 0%, #211c14 100%);
+  color: var(--color-dark-text);
 }
 
 .hero__inner {
   max-width: 760px;
 }
 
+.hero h1 {
+  color: var(--color-dark-text);
+}
+
 .hero__lead {
   font-size: 1.1rem;
   max-width: 52ch;
+  color: rgba(245, 239, 224, 0.75);
+}
+
+.hero__note {
+  font-style: italic;
+  color: var(--color-accent);
+  margin-top: -0.5rem;
 }
 
 .hero__actions {
@@ -17,6 +29,16 @@
   gap: var(--space-2);
   margin-top: var(--space-4);
   flex-wrap: wrap;
+}
+
+.hero .btn:not(.btn--accent) {
+  border-color: rgba(245, 239, 224, 0.5);
+  color: var(--color-dark-text);
+
+  &:hover {
+    background: var(--color-dark-text);
+    color: var(--color-dark);
+  }
 }
 
 .intro__inner {
@@ -44,6 +66,7 @@
 .service-card {
   background: var(--color-bg);
   border: 1px solid var(--color-line);
+  border-top: 2px solid var(--color-accent);
   border-radius: 4px;
   padding: var(--space-4);
 }
@@ -63,18 +86,21 @@
 
 .gallery-teaser__item {
   aspect-ratio: 4 / 5;
-  background: linear-gradient(135deg, #e4dace, #cbb99a);
+  background: linear-gradient(135deg, #1c1912, var(--color-dark));
+  border: 1px solid rgba(185, 146, 44, 0.3);
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(43, 38, 34, 0.55);
+  color: var(--color-accent);
   font-family: var(--font-heading);
   letter-spacing: 0.04em;
 }
 
 .testimonials__grid {
   margin-top: var(--space-4);
+  display: flex;
+  justify-content: center;
 }
 
 .testimonial {
@@ -82,6 +108,7 @@
   padding: var(--space-4);
   background: var(--color-bg);
   border-left: 3px solid var(--color-accent);
+  max-width: 540px;
 
   p {
     font-family: var(--font-heading);
@@ -101,15 +128,15 @@
 
 .cta-band {
   padding: var(--space-6) 0;
-  background: var(--color-text);
-  color: var(--color-bg);
+  background: var(--color-dark);
+  color: var(--color-dark-text);
 
   h2 {
-    color: var(--color-bg);
+    color: var(--color-dark-text);
   }
 
   p {
-    color: rgba(250, 246, 241, 0.7);
+    color: rgba(245, 239, 224, 0.7);
     max-width: 46ch;
     margin-left: auto;
     margin-right: auto;

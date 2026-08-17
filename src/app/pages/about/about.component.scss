@@ -1,6 +1,6 @@
 .page-hero {
   padding-top: var(--space-6);
-  background: linear-gradient(180deg, #f2e9dd 0%, var(--color-bg) 100%);
+  background: linear-gradient(180deg, #f2ead7 0%, var(--color-bg) 100%);
 }
 
 .page-hero__lead {
@@ -23,7 +23,8 @@
 .story__image {
   aspect-ratio: 4 / 3;
   border-radius: 4px;
-  background: linear-gradient(135deg, #e4dace, #cbb99a);
+  background: linear-gradient(135deg, #1c1912, var(--color-dark));
+  border: 1px solid rgba(185, 146, 44, 0.3);
 }
 
 .values__grid {
@@ -37,15 +38,15 @@
 
 .cta-band {
   padding: var(--space-6) 0;
-  background: var(--color-text);
-  color: var(--color-bg);
+  background: var(--color-dark);
+  color: var(--color-dark-text);
 
   h2 {
-    color: var(--color-bg);
+    color: var(--color-dark-text);
   }
 
   p {
-    color: rgba(250, 246, 241, 0.7);
+    color: rgba(245, 239, 224, 0.7);
     max-width: 46ch;
     margin-left: auto;
     margin-right: auto;

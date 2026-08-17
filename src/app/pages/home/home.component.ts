@@ -22,26 +22,24 @@ export class HomeComponent {
   servicePreviews: ServicePreview[] = [
     {
       title: 'Residential Interiors',
-      description: 'Full-home design from concept to final styling, tailored to how you actually live.'
+      description: 'Full-home design from concept to final styling — bedrooms, living rooms, and everything between.'
     },
     {
-      title: 'Bespoke Furniture',
-      description: 'Handcrafted pieces made with local artisans — built to last generations, not seasons.'
+      title: 'Kitchen & Home Bar',
+      description: 'Smart, modular kitchens and statement home bars built for how you actually cook and entertain.'
     },
     {
-      title: 'Renovation & Turnkey',
-      description: 'End-to-end execution: civil work, electrical, and finishing, managed under one roof.'
+      title: 'Office Interiors',
+      description: 'Workspaces that look sharp on camera and work harder on a normal Tuesday.'
     }
   ];
 
+  // Real client feedback from Karigrah's Instagram (Office highlight, 19 Jan 2025).
+  // Add more real testimonials here as they come in — do not invent quotes.
   testimonials: Testimonial[] = [
     {
-      quote: 'Karigrah turned our flat into something that finally feels like us — warm, considered, unhurried.',
-      author: 'Aditi & Rohan, Bandra'
-    },
-    {
-      quote: 'The attention to craft is rare. Every joint, every finish was chosen with intent.',
-      author: 'Naveen K., Indiranagar'
+      quote: 'Thank you Karigrah, for such an amazing interior.',
+      author: 'Aditya A. — Office project'
     }
   ];
 }

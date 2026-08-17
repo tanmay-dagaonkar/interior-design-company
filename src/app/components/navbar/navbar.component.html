@@ -1,6 +1,8 @@
 <header class="navbar">
   <div class="container navbar__inner">
-    <a routerLink="/" class="navbar__brand" (click)="closeMenu()">Karigrah</a>
+    <a routerLink="/" class="navbar__brand" (click)="closeMenu()">
+      <span class="navbar__brand-icon">⌂</span> KARIGRAH
+    </a>
 
     <nav class="navbar__links" [class.navbar__links--open]="menuOpen()">
       <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a>

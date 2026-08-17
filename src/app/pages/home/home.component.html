@@ -1,11 +1,12 @@
 <section class="hero">
   <div class="container hero__inner">
     <span class="eyebrow">Interior Design Studio</span>
-    <h1>Spaces shaped by craft,<br />built to be lived in.</h1>
+    <h1>You Dream,<br />We Build.</h1>
     <p class="hero__lead">
-      Karigrah is a boutique interior design studio designing homes and spaces that honour
-      material, light, and the people who live within them.
+      Karigrah is a full-service interior design studio for homes and offices — from concept
+      and 3D design to civil work and final styling, handled under one roof.
     </p>
+    <p class="hero__note">Bas requirement bata... baaki poora project hum sambhaal lenge.</p>
     <div class="hero__actions">
       <a routerLink="/contact" class="btn btn--accent">Start a project</a>
       <a routerLink="/gallery" class="btn">View our work</a>
@@ -17,13 +18,13 @@
   <div class="container intro__inner">
     <div>
       <span class="eyebrow">Our Philosophy</span>
-      <h2>Design that respects craftsmanship.</h2>
+      <h2>Trust the process.</h2>
     </div>
     <p>
-      The word "Karigrah" draws from "kaarigar" — the artisan. Every project we take on is
-      built around that idea: thoughtful design paired with honest, skilled craft. We work
-      closely with local makers, sourcing materials responsibly, to create interiors that
-      feel personal rather than trend-driven.
+      Every Karigrah project follows the same principle: real requirement first, design
+      second, execution handled end-to-end. Whether it's a home, an office, or a single
+      room, we manage design, materials, and site work under one team — so you don't have
+      to chase five different contractors to get your space built right.
     </p>
   </div>
 </section>
@@ -56,8 +57,8 @@
     </div>
 
     <div class="gallery-teaser__grid">
-      <div class="gallery-teaser__item" *ngFor="let i of [1, 2, 3, 4, 5, 6]">
-        <span>Project {{ i }}</span>
+      <div class="gallery-teaser__item" *ngFor="let label of ['Office', 'Kitchen', 'Home Bar', 'Residential', 'Renovation', 'Smart Home']">
+        <span>{{ label }}</span>
       </div>
     </div>
 
@@ -74,7 +75,7 @@
       <h2>From our clients</h2>
     </div>
 
-    <div class="grid grid--2 testimonials__grid">
+    <div class="testimonials__grid">
       <blockquote class="testimonial" *ngFor="let t of testimonials">
         <p>&ldquo;{{ t.quote }}&rdquo;</p>
         <cite>{{ t.author }}</cite>

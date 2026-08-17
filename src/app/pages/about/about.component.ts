@@ -16,16 +16,16 @@ interface Value {
 export class AboutComponent {
   values: Value[] = [
     {
-      title: 'Craft first',
-      description: 'We design around what artisans can build beautifully, not just what renders well.'
+      title: 'Trust the process',
+      description: 'Design, materials, and site execution run under one team, so nothing falls through the cracks.'
     },
     {
-      title: 'Honest materials',
-      description: 'Wood, stone, and metal used as themselves — no laminate pretending to be something else.'
+      title: 'Just tell us the requirement',
+      description: "Bas requirement bata — baaki poora project hum sambhaal lenge. We handle the rest, end to end."
     },
     {
-      title: 'Slow, considered process',
-      description: 'Fewer projects at a time, so every detail gets the attention it deserves.'
+      title: 'Built for real life',
+      description: 'Smart storage, smart kitchens, and layouts that hold up to how you actually live and work.'
     }
   ];
 }

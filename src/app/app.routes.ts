@@ -6,7 +6,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, title: 'Karigrah Interiors — Timeless Interior Design' },
+  { path: '', component: HomeComponent, title: 'Karigrah Interiors — You Dream, We Build' },
   { path: 'about', component: AboutComponent, title: 'About — Karigrah Interiors' },
   { path: 'services', component: ServicesComponent, title: 'Services — Karigrah Interiors' },
   { path: 'gallery', component: GalleryComponent, title: 'Gallery — Karigrah Interiors' },
