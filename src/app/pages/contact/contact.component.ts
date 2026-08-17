@@ -39,8 +39,18 @@ export class ContactComponent {
     this.sending.set(true);
     this.sendError.set(false);
 
+    const { name, email, phone, projectType, message } = this.form.value;
+    const templateParams = {
+      name,
+      email,
+      phone,
+      title: projectType,
+      message,
+      time: new Date().toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' }),
+    };
+
     emailjs
-      .send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, this.form.value as Record<string, unknown>, {
+      .send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, templateParams, {
         publicKey: EMAILJS_CONFIG.publicKey,
       })
       .then(() => {
