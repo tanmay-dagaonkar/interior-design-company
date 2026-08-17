@@ -63,10 +63,15 @@
         </span>
       </div>
 
-      <button type="submit" class="btn btn--accent">Send enquiry</button>
+      <button type="submit" class="btn btn--accent" [disabled]="sending()">
+        {{ sending() ? 'Sending…' : 'Send enquiry' }}
+      </button>
 
       <p class="contact__success" *ngIf="submitted()">
         Thanks — we've received your message and will be in touch soon.
+      </p>
+      <p class="field__error" *ngIf="sendError()">
+        Something went wrong sending your message. Please try again or email us directly.
       </p>
     </form>
   </div>

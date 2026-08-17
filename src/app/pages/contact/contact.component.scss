@@ -40,6 +40,11 @@
 .contact__form {
   display: grid;
   gap: var(--space-3);
+
+  .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 }
 
 .field {
