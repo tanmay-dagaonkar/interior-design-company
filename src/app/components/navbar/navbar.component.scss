@@ -16,16 +16,14 @@
 }
 
 .navbar__brand {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  letter-spacing: 0.12em;
-  color: var(--color-accent);
+  display: flex;
+  align-items: center;
 }
 
-.navbar__brand-icon {
-  color: var(--color-dark-text);
-  font-size: 1.1rem;
-  margin: 0 0.05em;
+.navbar__logo {
+  height: 52px;
+  width: auto;
+  display: block;
 }
 
 .navbar__links {

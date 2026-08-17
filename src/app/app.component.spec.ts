@@ -16,10 +16,11 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should render the navbar brand', () => {
+  it('should render the navbar logo', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.navbar__brand')?.textContent).toContain('KARIGRAH');
+    const logo = compiled.querySelector<HTMLImageElement>('.navbar__brand img');
+    expect(logo?.alt).toContain('Karigrah');
   });
 });
