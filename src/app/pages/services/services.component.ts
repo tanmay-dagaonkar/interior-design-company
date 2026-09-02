@@ -19,32 +19,32 @@ export class ServicesComponent {
     {
       title: 'Residential Interiors',
       description: 'Complete home design — from spatial planning to final styling, for every room in the house.',
-      points: ['Space planning & layout', 'Material & finish selection', 'Lighting design', 'Furniture & decor styling']
+      points: ['Space planning & layout', 'Bedroom & living room design', 'Furniture & decor styling', 'Ceiling & wall finishes']
     },
     {
-      title: 'Kitchen & Home Bar Design',
-      description: 'Modular kitchens and home bars designed around how you actually cook, store, and entertain.',
-      points: ['Modular kitchen layouts', 'Smart storage solutions', 'Home bar & entertaining spaces', 'Appliance integration']
+      title: 'Modular Kitchens & Wardrobes',
+      description: 'Our most-requested work — kitchens and storage designed around finishes, shutters, and layouts that hold up daily.',
+      points: ['Modular kitchen layouts', 'Countertop & finish selection', 'Wardrobe & wall storage design', 'Shutter & handle finishes']
     },
     {
-      title: 'Office Interiors',
-      description: 'Workspaces designed for focus, meetings, and a good first impression on clients.',
-      points: ['Workstations & cabins', 'Meeting & conference rooms', 'Reception & branding', 'Lighting & acoustics']
+      title: 'Office & Commercial Interiors',
+      description: 'Workspaces and commercial spaces — including hospitals — designed to work as hard as the people using them.',
+      points: ['Workstations & cabins', 'Meeting & reception areas', 'Hospital & clinical interiors', 'Branding & signage']
     },
     {
-      title: 'Renovation & Turnkey',
-      description: 'End-to-end execution so you deal with one team, not five contractors.',
+      title: 'Home Bar & Entertaining Spaces',
+      description: 'A dedicated corner for entertaining, built with storage, lighting, and finishes chosen with intent.',
+      points: ['Glassware & storage cabinets', 'Bar lighting', 'Layout & flow planning']
+    },
+    {
+      title: 'Renovation & Turnkey Execution',
+      description: 'End-to-end execution so you deal with one team, not five contractors — on a real timeline, not guesswork.',
       points: ['Civil & structural work', 'Electrical & plumbing coordination', 'Site supervision', 'Final handover']
     },
     {
-      title: 'Smart Home Integration',
-      description: 'Lighting, security, and automation layered into the design from the start, not bolted on after.',
-      points: ['Smart lighting & switches', 'Home automation wiring', 'Security integration']
-    },
-    {
       title: 'Design Consultation',
-      description: 'A focused session for homeowners who want expert direction without a full engagement.',
-      points: ['Layout & flow review', 'Colour & material guidance', 'Vastu-conscious planning', 'Shopping list & vendor recommendations']
+      description: 'Expert direction on the details that make or break a project — lighting, colour, and budget, before you commit.',
+      points: ['Lighting design', 'Colour & paint guidance', 'Vastu-conscious planning', 'Budget & material guidance']
     }
   ];
 }

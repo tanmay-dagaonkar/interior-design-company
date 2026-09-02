@@ -57,8 +57,12 @@
     </div>
 
     <div class="gallery-teaser__grid">
-      <div class="gallery-teaser__item" *ngFor="let label of ['Office', 'Kitchen', 'Home Bar', 'Residential', 'Renovation', 'Smart Home']">
-        <span>{{ label }}</span>
+      <div class="gallery-teaser__item" *ngFor="let url of latestPosts">
+        <blockquote
+          class="instagram-media"
+          [attr.data-instgrm-permalink]="url"
+          data-instgrm-version="14"
+        ></blockquote>
       </div>
     </div>
 

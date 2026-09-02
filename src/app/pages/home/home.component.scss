@@ -73,28 +73,17 @@
 
 .gallery-teaser__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-2);
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-3);
   margin-top: var(--space-4);
 }
 
-@media (min-width: 720px) {
-  .gallery-teaser__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .gallery-teaser__item {
-  aspect-ratio: 4 / 5;
-  background: linear-gradient(135deg, #1c1912, var(--color-dark));
-  border: 1px solid rgba(185, 146, 44, 0.3);
-  border-radius: 4px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: var(--color-accent);
-  font-family: var(--font-heading);
-  letter-spacing: 0.04em;
+  min-height: 400px;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .testimonials__grid {

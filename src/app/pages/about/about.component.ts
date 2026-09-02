@@ -20,12 +20,12 @@ export class AboutComponent {
       description: 'Design, materials, and site execution run under one team, so nothing falls through the cracks.'
     },
     {
-      title: 'Just tell us the requirement',
-      description: "Bas requirement bata — baaki poora project hum sambhaal lenge. We handle the rest, end to end."
+      title: 'No hidden costs',
+      description: 'Budgets are planned upfront and explained clearly — the price you agree to is the price you pay.'
     },
     {
       title: 'Built for real life',
-      description: 'Smart storage, smart kitchens, and layouts that hold up to how you actually live and work.'
+      description: 'Smart storage, well-planned kitchens, and layouts that hold up to how you actually live and work.'
     }
   ];
 }
