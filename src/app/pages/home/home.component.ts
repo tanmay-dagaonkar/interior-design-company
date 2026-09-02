@@ -58,6 +58,6 @@ export class HomeComponent implements AfterViewInit {
   ];
 
   ngAfterViewInit(): void {
-    this.embeds.process();
+    this.embeds.processWithRetries();
   }
 }

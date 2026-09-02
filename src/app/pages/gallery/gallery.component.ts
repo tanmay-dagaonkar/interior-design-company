@@ -22,11 +22,11 @@ export class GalleryComponent implements AfterViewInit {
   hasMore = computed(() => this.visibleCount() < this.posts.length);
 
   ngAfterViewInit(): void {
-    this.embeds.process();
+    this.embeds.processWithRetries();
   }
 
   showMore(): void {
     this.visibleCount.update((count) => Math.min(count + PAGE_SIZE, this.posts.length));
-    setTimeout(() => this.embeds.process(), 0);
+    this.embeds.processWithRetries();
   }
 }

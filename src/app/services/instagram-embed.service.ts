@@ -33,4 +33,19 @@ export class InstagramEmbedService {
       setTimeout(() => this.process(attempts + 1), 150);
     }
   }
+
+  /**
+   * Calls process() a few times on a short backoff. Newly-inserted
+   * blockquotes (e.g. after a "Show more" click) sometimes need a second
+   * nudge, since embed.js's own auto-scan only runs once on initial load.
+   */
+  processWithRetries(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
+    this.process();
+    setTimeout(() => this.process(), 500);
+    setTimeout(() => this.process(), 1500);
+  }
 }
