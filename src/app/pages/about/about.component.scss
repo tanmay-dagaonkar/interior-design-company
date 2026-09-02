@@ -27,6 +27,61 @@
   overflow: hidden;
 }
 
+.facts {
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-5);
+}
+
+.facts__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.fact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.fact__value {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  color: var(--color-accent-dark);
+}
+
+.fact__label {
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 720px) {
+  .facts__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.process__grid {
+  margin-top: var(--space-5);
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (min-width: 720px) {
+  .process__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.process-step__index {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--color-accent);
+  margin-bottom: var(--space-1);
+}
+
 .values__grid {
   margin-top: var(--space-4);
 }

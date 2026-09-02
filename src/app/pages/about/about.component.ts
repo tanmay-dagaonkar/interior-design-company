@@ -8,6 +8,16 @@ interface Value {
   description: string;
 }
 
+interface Fact {
+  value: string;
+  label: string;
+}
+
+interface ProcessStep {
+  title: string;
+  description: string;
+}
+
 // A handful of posts spanning different project types, used as a collage
 // on the About page instead of a single static image.
 const COLLAGE_URLS = [
@@ -27,6 +37,32 @@ export class AboutComponent implements AfterViewInit {
   private embeds = inject(InstagramEmbedService);
 
   collagePosts = COLLAGE_URLS;
+
+  facts: Fact[] = [
+    { value: '6', label: 'Core Service Categories' },
+    { value: '1 Team', label: 'Design Through Handover' },
+    { value: '35 Days', label: '90% Done On a Recent Office Fit-Out' },
+    { value: 'Jabalpur', label: "Where We're Based" }
+  ];
+
+  process: ProcessStep[] = [
+    {
+      title: 'Understand',
+      description: 'A site visit and an honest conversation about your requirement, timeline, and budget — before anything gets designed.'
+    },
+    {
+      title: 'Design',
+      description: '3D design and material selection, finalized and signed off before civil work begins — so there are no surprises mid-project.'
+    },
+    {
+      title: 'Execute',
+      description: 'Civil, electrical, and plumbing work coordinated on site by the same team that designed it, not handed off to a separate contractor.'
+    },
+    {
+      title: 'Handover',
+      description: 'Final styling, a full walkthrough, and handover — the requirement you gave us, built.'
+    }
+  ];
 
   values: Value[] = [
     {

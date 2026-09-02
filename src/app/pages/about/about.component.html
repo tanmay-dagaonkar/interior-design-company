@@ -44,6 +44,34 @@
   </div>
 </section>
 
+<section class="section facts">
+  <div class="container">
+    <div class="facts__grid">
+      <div class="fact" *ngFor="let fact of facts">
+        <span class="fact__value">{{ fact.value }}</span>
+        <span class="fact__label">{{ fact.label }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--muted process">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">How We Work</span>
+      <h2>From first conversation to final handover.</h2>
+    </div>
+
+    <div class="process__grid">
+      <div class="process-step" *ngFor="let step of process; let i = index">
+        <div class="process-step__index">{{ (i + 1) < 10 ? '0' + (i + 1) : (i + 1) }}</div>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section values">
   <div class="container">
     <div class="text-center">
