@@ -1,11 +1,9 @@
-import { Component, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, PLATFORM_ID, inject, signal, computed } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { INSTAGRAM_POST_URLS } from '../../instagram-posts';
 
-interface Project {
-  title: string;
-  category: string;
-}
+const PAGE_SIZE = 5;
 
 @Component({
   selector: 'app-gallery',
@@ -14,28 +12,19 @@ interface Project {
   styleUrl: './gallery.component.scss'
 })
 export class GalleryComponent {
-  categories = ['All', 'Residential', 'Office', 'Kitchen', 'Home Bar', 'Renovation'];
-  activeCategory = signal('All');
+  private platformId = inject(PLATFORM_ID);
 
-  // Placeholder entries — swap in real project photos and names once available.
-  projects: Project[] = [
-    { title: 'Residential Project', category: 'Residential' },
-    { title: 'Office Fit-Out', category: 'Office' },
-    { title: 'Modular Kitchen', category: 'Kitchen' },
-    { title: 'Home Bar', category: 'Home Bar' },
-    { title: 'Full Home Renovation', category: 'Renovation' },
-    { title: 'Residential Project', category: 'Residential' },
-    { title: 'Office Interior', category: 'Office' },
-    { title: 'Smart Kitchen', category: 'Kitchen' },
-    { title: 'Residential Project', category: 'Residential' }
-  ];
+  posts = INSTAGRAM_POST_URLS;
+  visibleCount = signal(PAGE_SIZE);
 
-  get filteredProjects(): Project[] {
-    const active = this.activeCategory();
-    return active === 'All' ? this.projects : this.projects.filter((p) => p.category === active);
-  }
+  visiblePosts = computed(() => this.posts.slice(0, this.visibleCount()));
+  hasMore = computed(() => this.visibleCount() < this.posts.length);
 
-  setCategory(category: string): void {
-    this.activeCategory.set(category);
+  showMore(): void {
+    this.visibleCount.update((count) => Math.min(count + PAGE_SIZE, this.posts.length));
+
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() => (window as any).instgrm?.Embeds?.process(), 0);
+    }
   }
 }

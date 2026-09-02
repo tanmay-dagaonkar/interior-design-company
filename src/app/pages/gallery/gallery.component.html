@@ -2,32 +2,24 @@
   <div class="container">
     <span class="eyebrow">Gallery</span>
     <h1>Selected projects.</h1>
-    <p class="page-hero__lead">A look at recently completed homes, offices, kitchens, and renovations.</p>
+    <p class="page-hero__lead">Live from Instagram — real posts and reels from our recent work.</p>
   </div>
 </section>
 
 <section class="section gallery">
   <div class="container">
-    <div class="gallery__filters">
-      <button
-        type="button"
-        *ngFor="let category of categories"
-        class="filter-chip"
-        [class.filter-chip--active]="activeCategory() === category"
-        (click)="setCategory(category)"
-      >
-        {{ category }}
-      </button>
+    <div class="gallery__grid">
+      <div class="gallery__embed" *ngFor="let url of visiblePosts()">
+        <blockquote
+          class="instagram-media"
+          [attr.data-instgrm-permalink]="url"
+          data-instgrm-version="14"
+        ></blockquote>
+      </div>
     </div>
 
-    <div class="gallery__grid">
-      <figure class="gallery__item" *ngFor="let project of filteredProjects">
-        <div class="gallery__thumb"></div>
-        <figcaption>
-          <span class="gallery__title">{{ project.title }}</span>
-          <span class="gallery__category">{{ project.category }}</span>
-        </figcaption>
-      </figure>
+    <div class="text-center gallery__more" *ngIf="hasMore()">
+      <button type="button" class="btn btn--accent" (click)="showMore()">Show more</button>
     </div>
   </div>
 </section>
