@@ -31,7 +31,7 @@
   align-items: center;
   gap: var(--space-4);
 
-  a {
+  a:not(.navbar__cta) {
     font-size: 0.9rem;
     letter-spacing: 0.03em;
     color: rgba(245, 239, 224, 0.7);
