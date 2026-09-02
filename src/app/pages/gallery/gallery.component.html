@@ -8,11 +8,23 @@
 
 <section class="section gallery">
   <div class="container">
+    <div class="gallery__filters">
+      <button
+        type="button"
+        *ngFor="let category of categories"
+        class="filter-chip"
+        [class.filter-chip--active]="activeCategory() === category"
+        (click)="setCategory(category)"
+      >
+        {{ category }}
+      </button>
+    </div>
+
     <div class="gallery__grid">
-      <div class="gallery__embed" *ngFor="let url of visiblePosts()">
+      <div class="gallery__embed" *ngFor="let post of visiblePosts()">
         <blockquote
           class="instagram-media"
-          [attr.data-instgrm-permalink]="url"
+          [attr.data-instgrm-permalink]="post.url"
           data-instgrm-version="14"
         ></blockquote>
       </div>
