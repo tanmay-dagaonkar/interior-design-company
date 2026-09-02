@@ -23,9 +23,18 @@
   color: var(--color-text-muted);
   font-size: 0.85rem;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    border-color: var(--color-text);
+    color: var(--color-text);
+  }
+
+  &:active {
     border-color: var(--color-text);
     color: var(--color-text);
   }
@@ -35,6 +44,14 @@
   background: var(--color-dark);
   border-color: var(--color-dark);
   color: var(--color-accent);
+
+  &:hover,
+  &:focus,
+  &:focus-visible,
+  &:active {
+    border-color: var(--color-dark);
+    color: var(--color-accent);
+  }
 }
 
 .gallery__grid {
