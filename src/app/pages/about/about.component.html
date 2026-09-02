@@ -10,8 +10,7 @@
 </section>
 
 <section class="section section--muted story">
-  <div class="container story__inner">
-    <div class="story__image" aria-hidden="true"></div>
+  <div class="container">
     <div class="story__content">
       <span class="eyebrow">Our Story</span>
       <h2>Design and execution, under one roof.</h2>
@@ -31,6 +30,16 @@
         project. Design isn't just what you see — it's the material quality, craftsmanship,
         and detailing you don't see, which is exactly where most cost surprises hide.
       </p>
+    </div>
+
+    <div class="story__collage">
+      <div class="story__collage-item" *ngFor="let post of collagePosts">
+        <blockquote
+          class="instagram-media"
+          [attr.data-instgrm-permalink]="post"
+          data-instgrm-version="14"
+        ></blockquote>
+      </div>
     </div>
   </div>
 </section>

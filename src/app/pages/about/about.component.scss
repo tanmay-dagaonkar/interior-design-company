@@ -8,23 +8,23 @@
   font-size: 1.05rem;
 }
 
-.story__inner {
+.story__content {
+  max-width: 640px;
+}
+
+.story__collage {
+  margin-top: var(--space-5);
   display: grid;
-  gap: var(--space-4);
-  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-3);
 }
 
-@media (min-width: 720px) {
-  .story__inner {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.story__image {
-  aspect-ratio: 4 / 3;
+.story__collage-item {
+  display: flex;
+  justify-content: center;
+  min-height: 400px;
   border-radius: 4px;
-  background: linear-gradient(135deg, #1c1912, var(--color-dark));
-  border: 1px solid rgba(185, 146, 44, 0.3);
+  overflow: hidden;
 }
 
 .values__grid {
