@@ -8,6 +8,14 @@
   font-size: 1.05rem;
 }
 
+.page-hero__extra {
+  max-width: 68ch;
+  margin-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
 .story__content {
   max-width: 640px;
 }
