@@ -13,6 +13,11 @@ interface Testimonial {
   author: string;
 }
 
+interface HeroPoint {
+  label: string;
+  text: string;
+}
+
 // The 5 most recent Karigrah posts, sourced from the account's own post export.
 const LATEST_POST_URLS: string[] = [
   'https://www.instagram.com/p/DcOhHHoI5xd/',
@@ -32,6 +37,23 @@ export class HomeComponent implements AfterViewInit {
   private embeds = inject(InstagramEmbedService);
 
   latestPosts = LATEST_POST_URLS;
+
+  // Compact index of what Karigrah takes on, shown beside the hero headline.
+  heroScope: string[] = [
+    'Residential Interiors',
+    'Modular Kitchens & Wardrobes',
+    'Office & Commercial',
+    'Home Bar & Entertaining',
+    'Renovation & Turnkey Execution',
+    'Design Consultation'
+  ];
+
+  heroPoints: HeroPoint[] = [
+    { label: 'One team', text: 'Design, materials and site work' },
+    { label: 'Upfront budgets', text: 'Planned before work begins' },
+    { label: 'Homes & offices', text: 'Including clinics and hospitals' },
+    { label: 'Jabalpur', text: 'Wright Town studio' }
+  ];
 
   servicePreviews: ServicePreview[] = [
     {
