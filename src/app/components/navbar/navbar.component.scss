@@ -89,6 +89,7 @@
     top: 76px;
     left: 0;
     right: 0;
+    z-index: 10;
     background: var(--color-dark);
     border-bottom: 1px solid rgba(185, 146, 44, 0.25);
     flex-direction: column;
